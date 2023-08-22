@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Inventory - ONES - PyAPI</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Inventory";
+        var mkdocs_page_input_path = "Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Inventory.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> ONES - PyAPI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../ONES_Intregartion_with_prometheus/">ONES Integration with Prometheus</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones API For Network Telemetry</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Secured APIs For NetOps Monitoriing</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../Capacity/">Capacity</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Health/">Health</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Inventory</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#device-info">Device Info</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-roles">Get Roles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#switch-skus">Switch SKUs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-asics">Get ASICs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#agent-versions">Agent Versions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nos-versions">NOS Versions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#linux-versions">Linux Versions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#onie-versions">ONIE Versions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cables">Cables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#device-peripherals">Device Peripherals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#device-interfaces">Device Interfaces</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Topology/">Topology</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Traffic/">Traffic</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Streaming Telemetry</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Streaming_Telemetry/StreamingTelemetry/">Streaming Telemetry</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">ONES AGENT</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/OnesAgent/">ONES Agent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/bgp_controlplanes/">Bgp controlplanes</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/data_models/">Data models</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/device_interface/">Device interface</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/gnmiClient/">GNMI Clients</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/gnmic_open_config_path_system_resouerces/">GNMI Open Config Path Subscriptions</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/lldp_neighbours/">Lldp neighbours</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/platform_peripherals/">Platform peripherals</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones APIs For Orchestration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Ones_APIs_For_Orchestration/Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 1 Orchestration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Ones_APIs_For_Orchestration/Day_1_Orchestration/Day1Orchestration/">Day 1 Orchestration example</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 2 NetOps</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Ones_APIs_For_Orchestration/Day_2_NetOps/">Day2 Operations example</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">ONES - PyAPI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Ones API For Network Telemetry &raquo;</li>
+          <li>Secured APIs For NetOps Monitoriing &raquo;</li>
+      <li class="breadcrumb-item active">Inventory</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/AvizNetworks/ones-pyapi/edit/master/docs/Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Inventory.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="inventory">Inventory</h2>
+<p><b>Import Client </b></p>
+<pre><code class="language-py">from restclient.telemetry.client import ONESClient 
+</code></pre>
+<p>&lt;b Initialize client &lt;/b</p>
+<pre><code class="language-py">conn = ONESClient(&quot;https://10.x.x.x:443&quot;, &quot;username&quot;, &quot;password&quot;)
+
+conn.connect()
+</code></pre>
+<h3 id="device-info">Device Info</h3>
+<p><p>Get list of devices based on specific filters (SKU, Vendor, ASIC)</p></p>
+<pre><code class="language-py">res = conn.get_hardware_info()
+</code></pre>
+<h3 id="get-roles">Get Roles</h3>
+<p>Count of devices in different roles i.e., Leaf/Spine/etc., </p>
+
+<pre><code class="language-py">res = conn.get_roles()
+</code></pre>
+<h3 id="switch-skus">Switch SKUs</h3>
+<p>Get a count & percentage distribution of Switch SKU's across fabric. </p>
+
+<pre><code class="language-py">res = conn.get_switch_skus()
+</code></pre>
+<h3 id="get-asics">Get ASICs</h3>
+<p>Get a count & percentage distribution of Asic's across fabric. </p>
+
+<pre><code class="language-py">res = conn.get_asics_info()
+</code></pre>
+<h3 id="agent-versions">Agent Versions</h3>
+<p>Get a count & percentage distribution of ONES's agent version(Telemetry and Orchestrator) across fabric. </p>
+
+<pre><code class="language-py">res = conn.get_agent_version()
+</code></pre>
+<h3 id="nos-versions">NOS Versions</h3>
+<p>Get a count & percentage distribution of device's NOS versions across fabric. </p>
+
+<pre><code class="language-py">res = conn.get_nos_version()
+</code></pre>
+<h3 id="linux-versions">Linux Versions</h3>
+<p>Get a count & percentage distribution of device's kernel versions across fabric. </p>
+
+<pre><code class="language-py">res = conn.get_linux_version()
+</code></pre>
+<h3 id="onie-versions">ONIE Versions</h3>
+<p>Get a count & percentage distribution of device's ONIE's versions accross fabric. </p>
+
+<pre><code class="language-py">res = conn.get_onie_version()
+</code></pre>
+<h3 id="cables">Cables</h3>
+<p>Get a count & percentage distribution & count of Cables used across fabric, also lists count of cables needed for unused port. </p>
+
+<pre><code class="language-py">res = conn.get_cable_info()
+</code></pre>
+<h3 id="device-peripherals">Device Peripherals</h3>
+<p>Provides device's Fan and PSU hardware information. </p>
+
+<pre><code class="language-py">query_params = {&quot;deviceAddress&quot;: &quot;0c:xx:xx:xx:xx:x0&quot;}
+res = conn.get_device_peripherals(query_params)
+</code></pre>
+<h3 id="device-interfaces">Device Interfaces</h3>
+<p>Provides Interface information e.g., name, alias, transcievers specific details, etc. of a device </p>
+
+<pre><code class="language-py">payload = {
+  &quot;filter&quot;: {
+    &quot;deviceAddress&quot;: &quot;0c:xx:xx:xx:xx:x0&quot;
+  }
+}
+res = conn.get_device_interfaces(payload)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Health/" class="btn btn-neutral float-left" title="Health"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Topology/" class="btn btn-neutral float-right" title="Topology">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/AvizNetworks/ones-pyapi" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Health/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Topology/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

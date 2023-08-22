@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Traffic - ONES - PyAPI</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Traffic";
+        var mkdocs_page_input_path = "Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Traffic.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> ONES - PyAPI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../ONES_Intregartion_with_prometheus/">ONES Integration with Prometheus</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones API For Network Telemetry</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Secured APIs For NetOps Monitoriing</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../Capacity/">Capacity</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Health/">Health</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Inventory/">Inventory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Topology/">Topology</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Traffic</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#traffic-counters">Traffic Counters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#traffic-utilization">Traffic Utilization</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Streaming Telemetry</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Streaming_Telemetry/StreamingTelemetry/">Streaming Telemetry</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">ONES AGENT</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/OnesAgent/">ONES Agent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/bgp_controlplanes/">Bgp controlplanes</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/data_models/">Data models</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/device_interface/">Device interface</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/gnmiClient/">GNMI Clients</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/gnmic_open_config_path_system_resouerces/">GNMI Open Config Path Subscriptions</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/lldp_neighbours/">Lldp neighbours</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Streaming_Telemetry/ONES_AGENT/platform_peripherals/">Platform peripherals</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones APIs For Orchestration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Ones_APIs_For_Orchestration/Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 1 Orchestration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Ones_APIs_For_Orchestration/Day_1_Orchestration/Day1Orchestration/">Day 1 Orchestration example</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 2 NetOps</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Ones_APIs_For_Orchestration/Day_2_NetOps/">Day2 Operations example</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">ONES - PyAPI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Ones API For Network Telemetry &raquo;</li>
+          <li>Secured APIs For NetOps Monitoriing &raquo;</li>
+      <li class="breadcrumb-item active">Traffic</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/AvizNetworks/ones-pyapi/edit/master/docs/Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Traffic.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="traffic">Traffic</h2>
+<p><b> Import Client </b></p>
+<pre><code class="language-py">from restclient.telemetry.client import ONESClient 
+</code></pre>
+<p><b> Initialize client </b></p>
+<pre><code class="language-py">conn = ONESClient(&quot;https://10.x.x.x:443&quot;, &quot;username&quot;, &quot;password&quot;)
+
+conn.connect()
+</code></pre>
+<h3 id="traffic-counters">Traffic Counters</h3>
+<p><b>Timeseries data of Average count of In/out packets &amp; Total count of errors &amp; discards of Interface, for a given device.</b></p>
+<pre><code class="language-py">query_params = {
+    &quot;fromDate&quot;: &quot;2023-04-04 04:54:27&quot;,
+    &quot;toDate&quot;: &quot;2023-04-04 05:54:27&quot;,
+     &quot;deviceAddress&quot; : &quot;10.x.x.x&quot;,
+    &quot;ifname&quot; : &quot;Ethernet0&quot;
+}
+res = conn.get_traffic_counters(query_params)
+</code></pre>
+<h3 id="traffic-utilization">Traffic Utilization</h3>
+<p><b>Timeseries data of Average count of In/out link utilization of Interface, for a given device.</b></p>
+<pre><code class="language-py">query_params = {
+    &quot;fromDate&quot;: &quot;2023-04-04 04:54:27&quot;,
+    &quot;toDate&quot;: &quot;2023-04-04 05:54:27&quot;,
+    &quot;deviceAddress&quot;: &quot;10.x.x.x&quot;,
+    &quot;ifname&quot;: &quot;Ethernet0&quot;
+}
+res = conn.get_traffic_util(query_params)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Topology/" class="btn btn-neutral float-left" title="Topology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Streaming_Telemetry/StreamingTelemetry/" class="btn btn-neutral float-right" title="Streaming Telemetry">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/AvizNetworks/ones-pyapi" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Topology/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Streaming_Telemetry/StreamingTelemetry/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

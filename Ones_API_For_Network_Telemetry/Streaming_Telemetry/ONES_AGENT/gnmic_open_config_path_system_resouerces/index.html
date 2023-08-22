@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>GNMI Open Config Path Subscriptions - ONES - PyAPI</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GNMI Open Config Path Subscriptions";
+        var mkdocs_page_input_path = "Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/gnmic_open_config_path_system_resouerces.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> ONES - PyAPI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../Installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../ONES_Intregartion_with_prometheus/">ONES Integration with Prometheus</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones API For Network Telemetry</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Secured APIs For NetOps Monitoriing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Secured_APIs_For_NetOps_Monitoriing/Capacity/">Capacity</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Secured_APIs_For_NetOps_Monitoriing/Health/">Health</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Secured_APIs_For_NetOps_Monitoriing/Inventory/">Inventory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Secured_APIs_For_NetOps_Monitoriing/Topology/">Topology</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Secured_APIs_For_NetOps_Monitoriing/Traffic/">Traffic</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Streaming Telemetry</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../StreamingTelemetry/">Streaming Telemetry</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">ONES AGENT</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../OnesAgent/">ONES Agent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../bgp_controlplanes/">Bgp controlplanes</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../data_models/">Data models</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../device_interface/">Device interface</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../gnmiClient/">GNMI Clients</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">GNMI Open Config Path Subscriptions</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#system-resources">System Resources</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../lldp_neighbours/">Lldp neighbours</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../platform_peripherals/">Platform peripherals</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones APIs For Orchestration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Ones_APIs_For_Orchestration/Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 1 Orchestration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Ones_APIs_For_Orchestration/Day_1_Orchestration/Day1Orchestration/">Day 1 Orchestration example</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 2 NetOps</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Ones_APIs_For_Orchestration/Day_2_NetOps/">Day2 Operations example</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">ONES - PyAPI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Ones API For Network Telemetry &raquo;</li>
+          <li>Streaming Telemetry &raquo;</li>
+          <li>ONES AGENT &raquo;</li>
+      <li class="breadcrumb-item active">GNMI Open Config Path Subscriptions</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/AvizNetworks/ones-pyapi/edit/master/docs/Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/gnmic_open_config_path_system_resouerces.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="gnmi-open-config-path-subscriptions">GNMI Open Config Path Subscriptions</h1>
+<h2 id="system-resources">System Resources</h2>
+<pre><code class="language-sh">gnmic -a 10.4.4.61::50052 -u admin -p YourPaSsWoRd --skip-verify subscribe --path “/system/processes/“ --stream-mode sample --sample-interval 10s --qos 0
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-sh">{
+  &quot;source&quot;: &quot;10.4.4.61:50052&quot;,
+  &quot;subscription-name&quot;: &quot;default-1679454364&quot;,
+  &quot;timestamp&quot;: 1679454358297960118,
+  &quot;time&quot;: &quot;2023-03-21T20:05:58.297960118-07:00&quot;,
+  &quot;updates&quot;: [
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=47]/state/pid&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/pid&quot;: 47
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=47]/state/name&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/name&quot;: &quot;ae6a64f24a2d|syncd&quot;
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=47]/state/cpu-utilization&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/cpu-utilization&quot;: 7
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=47]/state/memory-usage&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/memory-usage&quot;: 890241024
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=47]/state/memory-utilization&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/memory-utilization&quot;: 5
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=12]/state/pid&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/pid&quot;: 12
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=12]/state/name&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/name&quot;: &quot;cc982c3fba68|teamd&quot;
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=12]/state/cpu-utilization&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/cpu-utilization&quot;: 0
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=12]/state/memory-usage&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/memory-usage&quot;: 31572623
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=12]/state/memory-utilization&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/memory-utilization&quot;: 0
+      }
+    },
+    {
+      &quot;Path&quot;: &quot;system/processes/process[pid=41]/state/pid&quot;,
+      &quot;values&quot;: {
+        &quot;system/processes/process/state/pid&quot;: 41
+      }
+    }
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../gnmiClient/" class="btn btn-neutral float-left" title="GNMI Clients"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lldp_neighbours/" class="btn btn-neutral float-right" title="Lldp neighbours">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/AvizNetworks/ones-pyapi" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../gnmiClient/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lldp_neighbours/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

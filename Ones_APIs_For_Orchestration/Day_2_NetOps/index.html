@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Day2 Operations example - ONES - PyAPI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Day2 Operations example";
+        var mkdocs_page_input_path = "Ones_APIs_For_Orchestration/Day_2_NetOps/index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> ONES - PyAPI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../ONES_Intregartion_with_prometheus/">ONES Integration with Prometheus</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones API For Network Telemetry</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Secured APIs For NetOps Monitoriing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Capacity/">Capacity</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Health/">Health</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Inventory/">Inventory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Topology/">Topology</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Secured_APIs_For_NetOps_Monitoriing/Traffic/">Traffic</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Streaming Telemetry</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/StreamingTelemetry/">Streaming Telemetry</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">ONES AGENT</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/OnesAgent/">ONES Agent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/bgp_controlplanes/">Bgp controlplanes</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/data_models/">Data models</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/device_interface/">Device interface</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/gnmiClient/">GNMI Clients</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/gnmic_open_config_path_system_resouerces/">GNMI Open Config Path Subscriptions</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/lldp_neighbours/">Lldp neighbours</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Ones_API_For_Network_Telemetry/Streaming_Telemetry/ONES_AGENT/platform_peripherals/">Platform peripherals</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ones APIs For Orchestration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Day 1 Orchestration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Day_1_Orchestration/Day1Orchestration/">Day 1 Orchestration example</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Day 2 NetOps</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Day2 Operations example</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#importing-ones-fabric-manager-agent">Importing ONES Fabric Manager Agent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-up-connection">Setting Up connection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#backup-on-config">Backup on Config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-all-backups">Get all backups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restore-config">Restore Config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#custom-image-upgrade">Custom Image upgrade</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ztp-enable-image-upgrade">ZTP enable / Image Upgrade</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-config-difference">Get Config Difference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-controller-version">Get Controller version</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#get-management-operation-status-of-images">Get management operation status of images</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reboot-a-device">Reboot a device</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#get-controller-fabric-manager-version">Get controller / Fabric Manager version</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">ONES - PyAPI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Ones APIs For Orchestration &raquo;</li>
+          <li>Day 2 NetOps &raquo;</li>
+      <li class="breadcrumb-item active">Day2 Operations example</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/AvizNetworks/ones-pyapi/edit/master/docs/Ones_APIs_For_Orchestration/Day_2_NetOps/index.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="day2-operations-example">Day2 Operations example</h1>
+<p>This illustration demonstrates various day 2 operations such as backup&amp;restore, compare config, image upgrade, reboot a device etc.</p>
+<h2 id="importing-ones-fabric-manager-agent">Importing ONES Fabric Manager Agent</h2>
+<pre><code class="language-py">from restclient.orchestration.client import FMClient
+import json
+</code></pre>
+<h2 id="setting-up-connection">Setting Up connection</h2>
+<pre><code class="language-py">conn = FMClient(url = &quot;http://192.168.x.x:&lt;port_number&gt;&quot;) #usually &lt;port_number&gt; will be 8787
+</code></pre>
+<h2 id="backup-on-config">Backup on Config</h2>
+<pre><code class="language-py">payload = [{&quot;ip&quot;:&quot;192.168.x.x&quot;,&quot;label&quot;:&quot;test_backup&quot;}]
+result = conn.backup_on_config(payload)
+</code></pre>
+<h2 id="get-all-backups">Get all backups</h2>
+<pre><code class="language-py">payload = [&quot;192.168.x.1&quot;,&quot;192.168.x.2&quot;]
+result = conn.backups(payload)
+</code></pre>
+<h2 id="restore-config">Restore Config</h2>
+<pre><code class="language-py">payload = [
+    {&quot;ip&quot;:&quot;192.168.x.1&quot;,&quot;timestamp&quot;:&quot;USERINPUT&quot;},
+    {&quot;ip&quot;:&quot;192.168.x.2&quot;,&quot;timestamp&quot;:&quot;USERINPUT&quot;}
+]
+result = conn.restore_config(payload)
+</code></pre>
+<h2 id="custom-image-upgrade">Custom Image upgrade</h2>
+<p>To Trigger custom Image upgrade request</p>
+<pre><code class="language-py">payload_for_image_upgrade = [{&quot;ip&quot;:&quot;&lt;ip address&gt;&quot;,&quot;pathToImage&quot;:&quot;&lt;image path&gt;&quot;}]
+## 'image path' example: http://192.168.0.2:8192/home/NOS.bin
+
+result = conn.custom_image_upgrade(payload_for_image_upgrade)
+</code></pre>
+<h2 id="ztp-enable-image-upgrade">ZTP enable / Image Upgrade</h2>
+<p>To Trigger the ZTP, it take one or more device IPs as input</p>
+<pre><code class="language-py">payload = [&quot;192.168.x.1&quot;, &quot;192.168.x.2&quot;] 
+result = conn.ztp_enable(payload) # list of IPs
+</code></pre>
+<h2 id="get-config-difference">Get Config Difference</h2>
+<p>To get the data to show in config diff in UI</p>
+<pre><code class="language-py">payload_for_config_diff = { &quot;ip&quot;: &quot;192.168.x.x&quot;}
+result = conn.get_config_diff(payload_for_config_diff)
+</code></pre>
+<h2 id="get-controller-version">Get Controller version</h2>
+<pre><code class="language-py">print(&quot;Controller Version -&gt;&quot;)
+result = conn.get_controller_version()
+</code></pre>
+<h3 id="get-management-operation-status-of-images">Get management operation status of images</h3>
+<p>payload can be single IP, or list of IPs</p>
+<pre><code class="language-py">payload = [&quot;192.168.x.x&quot;]
+
+status =  conn.get_image_mgmnt_status(payload)
+print(json.dumps(status, indent= 4))
+</code></pre>
+<h3 id="reboot-a-device">Reboot a device</h3>
+<p>Only single ip should be pass at a time</p>
+<pre><code class="language-py">payload = [&quot;192.168.x.x&quot;]
+result = conn.reboot(payload)
+</code></pre>
+<h3 id="get-controller-fabric-manager-version">Get controller / Fabric Manager version</h3>
+<pre><code class="language-py">result = conn.controller_fm_version()
+</code></pre>
+<p>### Note - 
+ The API calls  Day2FM are synchronous, meaning we have to wait for one API call to complete successfully or fail before proceeding. To ensure proper synchronization, it is advisable to call the <strong>function get_image_mgmnt_status()</strong> after each API call. This function will provide the values for the <strong>device_action</strong> field, which, in turn, will allow us to determine the status of an image based on the status field.</p>
+<ul>
+<li>device_action = 0    <strong>Failed</strong></li>
+<li>device_action = 1    <strong>Device is Free, can take any action</strong></li>
+<li>device_action = 2    <strong>image management operations in progress (custom/zip)</strong></li>
+<li>device_action = 3    <strong>reboot is in progress</strong></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Day_1_Orchestration/Day1Orchestration/" class="btn btn-neutral float-left" title="Day 1 Orchestration example"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/AvizNetworks/ones-pyapi" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Day_1_Orchestration/Day1Orchestration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
