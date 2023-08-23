@@ -67,6 +67,30 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#cpu-utilization">CPU Utilization</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#memory-utilization">Memory Utilization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cpu-core-temperature">CPU Core Temperature</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#psu-temperature">PSU Temperature</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#psu-voltage">PSU Voltage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#psu-current">PSU Current</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fan-speed">Fan Speed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#psu-power">PSU Power</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#health-services-cpu">HEALTH SERVICES CPU</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#health-services-memory">HEALTH SERVICES MEMORY</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#health-bgp-neighbors">Health BGP Neighbors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#health-transcievers">Health Transcievers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#health-running-services">Health Running Services</a>
+    </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../Inventory/">Inventory</a>
@@ -156,12 +180,10 @@ from restclient.telemetry.client import ONESClient
 <pre><code class="language-py">conn  = ONESClient(url ='https://10.x.x.x', username=&quot;YOUR_USERNAME&quot;, password=&quot;YOUR_PASSWORD&quot;)
 conn.connect() 
 </code></pre>
-<p> Calling Methods</p>
-
+<p><b> Calling Methods</b></p>
 <p>Please Note, You can pass device_address or ip_address, both will work.</p>
 <h3 id="cpu-utilization">CPU Utilization</h3>
-<p>Timeseries data for CPU utilization for a given device. <p>
-
+<p>Timeseries data for CPU utilization for a given device. </p>
 
 <pre><code class="language-py">print(&quot;CPU_UTILIZATION&quot;)
 query_params =  {
@@ -171,11 +193,8 @@ query_params =  {
 }
 print(conn.get_cpu_utilization(query_params))
 </code></pre>
-
-
-### Memory Utilization
+<h3 id="memory-utilization">Memory Utilization</h3>
 <p>Timeseries data for Memory utilization for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;MEMORY_UTILIZATION&quot;)
 query_params = {
@@ -185,11 +204,8 @@ query_params = {
 }
 print(conn.get_memory_utilization(query_params))
 </code></pre>
-
-
-### CPU Core Temperature
+<h3 id="cpu-core-temperature">CPU Core Temperature</h3>
 <p>Timeseries data for CPU cores temprature for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;CPU_CORE_TEMPERATURE&quot;)
 query_params = {
@@ -199,11 +215,8 @@ query_params = {
 }
 print(conn.get_cpu_core_temperaure(query_params))
 </code></pre>
-
-
-### PSU Temperature
+<h3 id="psu-temperature">PSU Temperature</h3>
 <p>Timeseries data  of the temperature of PSUs for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;PSU_TEMPERATURE&quot;)
 query_params = {
@@ -213,12 +226,8 @@ query_params = {
 }
 print(conn.get_psu_temperature(query_params))
 </code></pre>
-
-
-### PSU Voltage
-
+<h3 id="psu-voltage">PSU Voltage</h3>
 <p>Timeseries data of voltage readings on PSU for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;PSU_VOLTAGE&quot;)
 query_params = {
@@ -228,12 +237,8 @@ query_params = {
 }
 print(conn.get_psu_voltage(query_params))
 </code></pre>
-
-
-
-### PSU Current
+<h3 id="psu-current">PSU Current</h3>
 <p> Timeseries data of current readings on PSU for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;PSU_CURRENT&quot;)
 query_params = {
@@ -243,11 +248,8 @@ query_params = {
 }
 print(conn.get_psu_current(query_params))
 </code></pre>
-
-
-### Fan Speed
+<h3 id="fan-speed">Fan Speed</h3>
 <p>Timeseries data for speed across all fans related to a device. </p>
-
 
 <pre><code class="language-py">print(&quot;FAN_SPEED&quot;)
 query_params = {
@@ -257,12 +259,8 @@ query_params = {
 }
 print(conn.get_fan_speed(query_params))
 </code></pre>
-
-
-
-### PSU Power
+<h3 id="psu-power">PSU Power</h3>
 <p> Timeseries data of power readings on PSU for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;PSU_POWER&quot;)
 query_params = {
@@ -272,12 +270,8 @@ query_params = {
 }
 print(conn.get_psu_power(query_params))
 </code></pre>
-
-
-
-### HEALTH SERVICES CPU
+<h3 id="health-services-cpu">HEALTH SERVICES CPU</h3>
 <p>Timeseries data for CPU utilization across services for a given device </p>
-
 
 <pre><code class="language-py">print(&quot;HEALTH_SERVICES_CPU&quot;)
 query_params = {
@@ -287,12 +281,8 @@ query_params = {
 }
 print(conn.get_health_services_cpu(query_params))
 </code></pre>
-
-
-
-### HEALTH SERVICES MEMORY
+<h3 id="health-services-memory">HEALTH SERVICES MEMORY</h3>
 <p>Timeseries data for Memory utilization across services for a given device </p>
-
 
 <pre><code class="language-py">print(&quot;HEALTH_SERVICES_MEMORY&quot;)
 query_params = {
@@ -302,12 +292,8 @@ query_params = {
 }
 print(conn.get_health_services_memory(query_params))
 </code></pre>
-
-
-
-### Health BGP Neighbors
+<h3 id="health-bgp-neighbors">Health BGP Neighbors</h3>
 <p>Timeseries data of count of up and down status for bgp neighbours.</p>
-
 
 <pre><code class="language-py">print(&quot;HEALTH_BGP NEIGHBORS&quot;)
 query_params = {
@@ -317,11 +303,8 @@ query_params = {
 }
 print(conn.get_health_bgp_neighbors(query_params))
 </code></pre>
-
-
-### Health Transcievers
+<h3 id="health-transcievers">Health Transcievers</h3>
 <p>Timeseries data for transceiver connected to selected port. ( Rx/Tx power, temperature & Voltage).</p>
-
 
 <pre><code class="language-py">print(&quot;HEALTH_TRANSCIEVERS&quot;)
 query_params = {
@@ -332,12 +315,8 @@ query_params = {
 }
 print(conn.get_health_trancievers(query_params))
 </code></pre>
-
-
-
-### Health Running Services
+<h3 id="health-running-services">Health Running Services</h3>
 <p>Timeseries data of number of services running for a given device. </p>
-
 
 <pre><code class="language-py">print(&quot;HEALTH_RUNNING_SERVICES&quot;)
 query_params = {
